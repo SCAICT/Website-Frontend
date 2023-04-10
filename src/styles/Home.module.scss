@@ -1,3 +1,5 @@
+@import './rwd.breakpoint.scss';
+
 .home {
   height: 100svh;
 
@@ -8,7 +10,7 @@
 
 }
 
-.title {
+.contain {
   height: 100svh;
   width: 100%;
 
@@ -27,11 +29,21 @@
     font-style: normal;
     letter-spacing: 0.5em;
     mix-blend-mode: normal;
+    text-align: center;
+
+    @include phone {
+      font-size: 1.5rem;
+    }
   }
 
   &>h2 {
     font-size: 1rem;
     font-weight: 200;
     letter-spacing: 3px;
+    text-align: center;
+
+    @include phone {
+      font-size: .8rem;
+    }
   }
 }

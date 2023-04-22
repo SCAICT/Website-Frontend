@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import style from '../styles/Home.module.scss';
 import ContentBlock from '@/components/contents/ContentBlock';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { __stylePageLeaved, __stylePageEntered } from '@/styles/script.style';
 
 export default function Home() {
@@ -21,6 +21,7 @@ export default function Home() {
             width={280}
             height={112}
             loading="lazy"
+            alt="SCAICT Logo"
           ></Image>
           <h1>中部電資聯合會議</h1>
           <h2>Student's Clubs Alliance of Information in Central Taiwan</h2>

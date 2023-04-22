@@ -7,7 +7,7 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   images: {
-    domains: ['yt3.ggpht.com'],
+    domains: ['yt3.ggpht.com', 'avatars.githubusercontent.com'],
   },
 };
 

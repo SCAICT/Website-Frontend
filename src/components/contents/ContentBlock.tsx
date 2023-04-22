@@ -20,7 +20,7 @@ export default function ContentBlock(props: IProps, ref: any) {
   }, [props]);
 
   return (
-    <div className="flex flex-col items-center text-neutral-950">
+    <div className="flex flex-col items-center text-neutral-950 py-5">
       <div className="linkbar flex jutify-center items-center gap-5 py-5 overflow-x-auto max-w-full max-[640px]:gap-1 px-3 ">
         <span
           className=" text-orange-950 font-semibold text-lg cursor-pointer hover:bg-orange-950/10 px-5 py-1 rounded-md ease-out duration-300 text-center max-[640px]:text-base max-[640px]:px-1"

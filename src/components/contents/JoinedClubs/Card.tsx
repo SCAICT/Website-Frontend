@@ -10,7 +10,13 @@ export default function Card(props: IProps) {
   return (
     <div className="p-10 flex flex-col items-center bg-white drop-shadow-lg rounded-lg max-w-[80svw]">
       <h1 className="text-2xl text-red-900">{data.name}</h1>
-      <Image src={data.icon} width={100} height={100} alt={data.name}></Image>
+      <Image
+        className="rounded"
+        src={data.icon}
+        width={100}
+        height={100}
+        alt={data.name}
+      ></Image>
       <p>{data.school}</p>
       <a href={`https://instagram.com/${data.insID.replace('@', '')}`}>
         Instagram: {data.insID}

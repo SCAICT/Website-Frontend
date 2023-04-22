@@ -24,7 +24,7 @@ export default function Home() {
             alt="SCAICT Logo"
           ></Image>
           <h1>中部電資聯合會議</h1>
-          <h2>Student's Clubs Alliance of Information in Central Taiwan</h2>
+          <h2>Student&#39;s Clubs Alliance of Information in Central Taiwan</h2>
           <div className={style.linkbar}>
             <span className={style.link} onClick={() => setDisplay('clubs')}>
               參與社團

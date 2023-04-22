@@ -14,7 +14,7 @@ export default function Members() {
     <>
       <div className="w-full">
         <h1 className="text-3xl font-bold text-red-900 mt-3 text-center">
-          參與社團
+          歷屆成員
         </h1>
         <div className="list flex flex-row flex-wrap justify-center gap-10 max-w-screen-xl mx-auto mt-20">
           <Card member={data}></Card>

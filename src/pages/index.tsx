@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Introduction from '@/components/Home/introduction';
+import ClubsBar from '@/components/Home/clubsBar';
+
 import style from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -23,6 +26,8 @@ export default function Home() {
           查看近期活動
         </Link>
       </div>
+      <Introduction></Introduction>
+      <ClubsBar></ClubsBar>
     </div>
   );
 }

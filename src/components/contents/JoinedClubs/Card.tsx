@@ -8,8 +8,10 @@ interface IProps {
 export default function Card(props: IProps) {
   const data = props.club;
   return (
-    <div className="p-10 flex flex-col items-center bg-white drop-shadow-lg rounded-lg max-w-[80svw]">
-      <h1 className="text-2xl text-red-900">{data.name}</h1>
+    <div className="px-10 py-8 flex flex-col items-center bg-neutral-800 drop-shadow-lg rounded-lg max-[640px]:w-[80svw] ">
+      <h1 className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-blue-500 my-3">
+        {data.name}
+      </h1>
       <Image
         className="rounded"
         src={data.icon}
@@ -17,8 +19,11 @@ export default function Card(props: IProps) {
         height={100}
         alt={data.name}
       ></Image>
-      <p>{data.school}</p>
-      <a href={`https://instagram.com/${data.insID.replace('@', '')}`}>
+      <p className="my-2 font-thin">{data.school}</p>
+      <a
+        className="text-center"
+        href={`https://instagram.com/${data.insID.replace('@', '')}`}
+      >
         Instagram: {data.insID}
       </a>
       <p className="truncate">{data.introduction}</p>

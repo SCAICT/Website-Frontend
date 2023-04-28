@@ -8,7 +8,7 @@ interface IProps {
 export default function Card(props: IProps) {
   const data = props.member;
   return (
-    <div className="p-10 flex flex-col items-center gap-5 bg-white drop-shadow-lg rounded-lg max-w-xs max-[640px]:max-w-[80svw]">
+    <div className="p-10 flex flex-col items-center gap-5 bg-neutral-800 drop-shadow-lg rounded-lg max-w-xs max-[640px]:max-w-[80svw]">
       <h1 className="text-3xl text-red-900 font-bold">{data.nickname}</h1>
       <Image
         src={data.avatar}

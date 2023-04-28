@@ -3,6 +3,10 @@ import Link from 'next/link';
 export default function LinkBar() {
   const linkList = [
     {
+      name: '首頁',
+      route: '/',
+    },
+    {
       name: '歷屆成員',
       route: '/members',
     },
@@ -24,8 +28,8 @@ export default function LinkBar() {
     },
   ];
   return (
-    <div className="fixed top-0 w-full bg-gray-950/30 z-[9999] py-4 px-6">
-      <ul className="flex items-centers justify-center gap-4">
+    <div className="fixed top-0 w-full bg-neutral-950/70 z-[9999] py-4 px-6">
+      <ul className="flex items-center justify-center gap-4">
         {linkList.map((e, i) => {
           return (
             <Link

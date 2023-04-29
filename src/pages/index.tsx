@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import Introduction from '@/components/Home/introduction';
 import ClubsBar from '@/components/Home/clubsBar';
+import Footer from '@/components/Home/Footer';
 
 import style from '../styles/Home.module.scss';
 
@@ -28,6 +29,7 @@ export default function Home() {
       </div>
       <Introduction></Introduction>
       <ClubsBar></ClubsBar>
+      <Footer></Footer>
     </div>
   );
 }

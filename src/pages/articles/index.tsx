@@ -1,8 +1,10 @@
 import PageTitle from '@/components/layout/pageTitle';
 import Card from '@/components/contents/CommuArticles/Card';
+import { IArticles } from '@/components/contents/CommuArticles/article';
 
 export default function Articles() {
   const data = {
+    id: 'abc',
     title: 'Test Tested Testing',
     timestamp: '20230422',
     tag: ['123', '456'],

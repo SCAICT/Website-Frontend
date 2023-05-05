@@ -7,10 +7,6 @@ export default function LinkBar() {
       route: '/',
     },
     {
-      name: '歷屆成員',
-      route: '/members',
-    },
-    {
       name: '參與社團',
       route: '/clubs',
     },

@@ -21,6 +21,15 @@ export default function Team() {
         <Card team={data}></Card>
         <Card team={data}></Card>
         <Card team={data}></Card>
+        <Card team={data}></Card>
+        <Card team={data}></Card>
+        <Card team={data}></Card>
+        <Card team={data}></Card>
+        <Card team={data}></Card>
+        <Card team={data}></Card>
+        <Card team={data}></Card>
+        <Card team={data}></Card>
+        <Card team={data}></Card>
       </div>
     </>
   );

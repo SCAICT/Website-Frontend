@@ -5,6 +5,17 @@ interface IProps {
   member: IMember;
 }
 
+function dn2n(dn: string) {
+  if (dn.length % 2 !== 0) return console.error('invalid described-number');
+  let output = new String();
+  for (let i = 0; i < dn.length; i += 2) {
+    for (let j = 0; j < Number(dn[i]); j++) {
+      output += dn[i + 1];
+    }
+  }
+  return output;
+}
+
 export default function Card(props: IProps) {
   const data = props.member;
   return (

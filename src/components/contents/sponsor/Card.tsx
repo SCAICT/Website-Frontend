@@ -1,5 +1,10 @@
 import Image from 'next/image';
 
+interface IProps {
+  src: string;
+  name: string;
+}
+
 export default function Card() {
   return (
     <div className="bg-neutral-900 px-5 py-3 max-w-xs rounded-lg flex flex-col items-center">

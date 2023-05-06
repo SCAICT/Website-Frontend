@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 
 import PageTitle from '@/components/layout/pageTitle';
-import { IArticles } from '@/components/contents/CommuArticles/article';
+import { IArticles } from '@/components/contents/Articles/article';
 
 const Post = () => {
   const router = useRouter();

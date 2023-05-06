@@ -11,6 +11,7 @@ const nextConfig = {
       'yt3.ggpht.com',
       'avatars.githubusercontent.com',
       'banahaker.github.io',
+      'raw.githubusercontent.com',
     ],
   },
 };

@@ -20,7 +20,7 @@ export default function Card(props: IProps) {
   const data = props.member;
   return (
     <div className="p-10 flex flex-col items-center gap-5 bg-neutral-900 drop-shadow-lg rounded-lg max-w-xs max-[640px]:max-w-[80svw]">
-      <h1 className="text-3xl text-red-900 font-bold">{data.nickname}</h1>
+      <h1 className="text-3xl text-green-500 font-bold">{data.nickname}</h1>
       <Image
         src={data.avatar}
         width={100}
@@ -31,7 +31,7 @@ export default function Card(props: IProps) {
       <p className="text-sm text-slate-400 font-thin tracking-widest	">
         {data.club} {data.titleInClub}
       </p>
-      <p className="truncate max-w-full text-red-800/80">{data.selfInto}</p>
+      <p className="truncate max-w-full text-green-800/80">{data.selfInto}</p>
     </div>
   );
 }

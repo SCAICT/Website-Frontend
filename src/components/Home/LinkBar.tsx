@@ -22,6 +22,10 @@ export default function LinkBar() {
       name: '近期活動',
       route: '/activities',
     },
+    {
+      name: '贊助廠商',
+      route: '/sponsors',
+    },
   ];
   return (
     <div className="fixed top-0 w-full bg-neutral-950/70 z-[9999] py-4 px-6">

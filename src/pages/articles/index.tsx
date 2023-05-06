@@ -1,6 +1,6 @@
 import PageTitle from '@/components/layout/pageTitle';
-import Card from '@/components/contents/CommuArticles/Card';
-import { IArticles } from '@/components/contents/CommuArticles/article';
+import Card from '@/components/contents/Articles/Card';
+import { IArticles } from '@/components/contents/Articles/article';
 
 export default function Articles() {
   const data = {

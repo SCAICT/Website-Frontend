@@ -9,7 +9,7 @@ export default function ClubsBar() {
     school: '明道中學',
     insID: '@mdcpp.2022',
     icon: 'https://yt3.ggpht.com/VIARxMe5c5YQwfqchu8oaJKZ2eIJWvjAFj9cPHoix-4pI8DBt4lPtQW5rmeZBVFPmH_DfnfJ=s900-c-k-c0x00ffffff-no-rj',
-    introduction: '[markdown]',
+    introduction: '# 123',
   };
   return (
     <div className="bg-neutral-900 py-10">

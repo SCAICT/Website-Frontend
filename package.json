@@ -9,20 +9,36 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/marked": "^5.0.0",
     "autoprefixer": "10.4.14",
+    "dompurify": "^3.0.3",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "jsdom": "^22.1.0",
+    "marked": "^5.0.4",
+    "net": "^1.0.2",
     "next": "13.3.0",
     "path": "^0.12.7",
     "postcss": "8.4.21",
     "primereact": "^9.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.3.1"
+    "react-markdown": "^8.0.7",
+    "tailwindcss": "3.3.1",
+    "tls": "^0.0.1"
   },
   "devDependencies": {
+    "@types/dompurify": "^3.0.2",
+    "@types/jsdom": "^21.1.1",
     "@types/node": "18.15.13",
     "@types/react": "18.0.38",
+    "fs": "^0.0.1-security",
     "sass": "^1.61.0"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false,
+    "child_process": false
   }
 }

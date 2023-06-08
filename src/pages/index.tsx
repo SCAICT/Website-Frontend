@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { ViewPager, Frame, Track, View } from 'react-view-pager'
 
 import Introduction from '@/components/Home/introduction';
 import ClubsBar from '@/components/Home/clubsBar';
@@ -23,7 +24,7 @@ export default function Home() {
         <h2>Student&#39;s Clubs Alliance of Information in Central Taiwan</h2>
         <Link
           href={'/activities'}
-          className=" bg-green-400 rounded-full px-10 py-2 font-thin text-xl mt-4 border border-green-400 hover:bg-transparent hover:text-green-400 transition"
+          className="px-10 py-2 mt-4 text-xl font-thin transition bg-green-400 border border-green-400 rounded-full  hover:bg-transparent hover:text-green-400"
         >
           查看近期活動
         </Link>
@@ -31,6 +32,7 @@ export default function Home() {
       <Introduction></Introduction>
       <ClubsBar></ClubsBar>
       <SponsorBlock></SponsorBlock>
+      
       <Footer></Footer>
     </div>
   );

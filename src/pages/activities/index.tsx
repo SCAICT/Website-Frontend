@@ -11,7 +11,7 @@ export default function Activities() {
     <>
       <div className="w-full h-full m-auto">
         <PageTitle title="近期活動" />
-        <div className="flex items-center w-full py-10 mx-40 text-center card">
+        <div className="flex items-center w-full px-40 py-10 text-center card">
           <Calendar
             value={date}
             onChange={(e: CalendarChangeEvent) => setDate(e.value)}

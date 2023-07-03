@@ -13,8 +13,8 @@ export default function Layout({ children }: IProps) {
       <Head>
         <title>Scaict - 中部電資聯合會議</title>
       </Head>
-      <div>
-        <LinkBar></LinkBar>
+      <div className='select-none'>
+        <LinkBar />
         {children}
       </div>
     </>

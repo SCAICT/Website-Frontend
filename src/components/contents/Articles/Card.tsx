@@ -18,8 +18,8 @@ export default function Card(props: IProps) {
       }}
     >
       <h1 className="text-2xl text-emerald-50">{data.title}</h1>
-      <p className="mt-1 text-gray-500 font-thin">{data.timestamp}</p>
-      <p className="truncate max-w-full mt-3 text-gray-500">{data.content}</p>
+      <p className="mt-1 font-thin text-gray-500">{data.timestamp}</p>
+      <p className="max-w-full mt-3 text-gray-500 truncate">{data.content}</p>
     </div>
   );
 }

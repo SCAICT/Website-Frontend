@@ -4,27 +4,27 @@ export default function LinkBar() {
   const linkList = [
     {
       name: '首頁',
-      route: '/',
+      route: '/#main',
     },
     {
       name: '參與社團',
-      route: '/clubs',
+      route: '/#clubs',
     },
     {
       name: '社群文章',
-      route: '/articles',
+      route: '/#articles',
     },
     {
       name: '內部分組',
-      route: '/teams',
+      route: '/#teams',
     },
     {
       name: '近期活動',
-      route: '/activities',
+      route: '/#activities',
     },
     {
       name: '贊助廠商',
-      route: '/sponsors',
+      route: '/#sponsors',
     },
   ];
   return (

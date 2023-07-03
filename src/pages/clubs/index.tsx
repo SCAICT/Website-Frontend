@@ -12,19 +12,22 @@ export default function Clubs() {
   };
   return (
     <>
-      <PageTitle title="參與社團"></PageTitle>
-      <div className="bg-neutral-900 w-full flex items-center justify-center flex-wrap gap-8 py-10 px-10 max-[640px]:px-2 ">
-        <Card club={data}></Card>
-        <Card club={data}></Card>
-        <Card club={data}></Card>
-        <Card club={data}></Card>
-        <Card club={data}></Card>
-        <Card club={data}></Card>
-        <Card club={data}></Card>
-        <Card club={data}></Card>
-        <Card club={data}></Card>
-        <Card club={data}></Card>
-        <Card club={data}></Card>
+      <div className="w-full h-full m-auto">
+        <PageTitle title="參與社團" />
+        <div className="mt-[2.5svh]">
+          <div className="w-full h-[calc(100svh-45svh)] flex flex-wrap gap-8 items-center justify-center overflow-scroll">
+            <Card club={data} />
+            <Card club={data} />
+            <Card club={data} />
+            <Card club={data} />
+            <Card club={data} />
+            <Card club={data} />
+            <Card club={data} />
+            <Card club={data} />
+            <Card club={data} />
+            <Card club={data} />
+          </div>
+        </div>
       </div>
     </>
   );

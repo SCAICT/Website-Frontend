@@ -13,15 +13,22 @@ export default function Articles() {
   };
   return (
     <>
-      <PageTitle title="社群文章"></PageTitle>
-      <div className="flex flex-col items-center gap-7 py-10">
-        <Card article={data}></Card>
-        <Card article={data}></Card>
-        <Card article={data}></Card>
-        <Card article={data}></Card>
-        <Card article={data}></Card>
-        <Card article={data}></Card>
-        <Card article={data}></Card>
+      <div className="w-full h-full m-auto">
+        <PageTitle title="社群文章" />
+        <div className="mt-[2.5svh]">
+          <div className="w-fＦll h-[calc(100svh-45svh)] flex flex-wrap gap-8 items-center justify-center overflow-scroll">
+            <Card article={data} />
+            <Card article={data} />
+            <Card article={data} />
+            <Card article={data} />
+            <Card article={data} />
+            <Card article={data} />
+            <Card article={data} />
+            <Card article={data} />
+            <Card article={data} />
+            <Card article={data} />
+          </div>
+        </div>
       </div>
     </>
   );

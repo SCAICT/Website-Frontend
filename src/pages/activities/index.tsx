@@ -11,14 +11,14 @@ export default function Activities() {
     <>
       <div className="w-full h-full m-auto">
         <PageTitle title="近期活動" />
-        <div className="flex items-center w-full px-40 py-10 text-center card">
+        <div className="flex justify-center gap-6 flex-wrap w-full px-40 py-10 text-center card max-md:p-5">
           <Calendar
             value={date}
             onChange={(e: CalendarChangeEvent) => setDate(e.value)}
             inline
             showWeek
           />
-          <div className="m-auto mt-5 rounded-lg bg-neutral-900 min-w-[466px] p-5">
+          <div className="m-auto mt-5 rounded-lg bg-neutral-900 max-md:min-w-[100%] w-[466px] p-5">
             沒有活動
           </div>
         </div>

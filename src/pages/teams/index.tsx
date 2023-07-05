@@ -13,10 +13,10 @@ export default function Team() {
 
   return (
     <>
-      <div className="w-full h-full m-auto">
+      <div className="w-full h-full m-auto overflow-hidden">
         <PageTitle title="內部團隊" />
-        <div className="mt-[2.5svh]">
-          <div className="w-full h-[calc(100svh-45svh)] flex flex-wrap gap-8 items-center justify-center overflow-scroll">
+        <div className="p-[2.5svh]">
+          <div className="w-full h-[calc(100svh-45svh)] flex flex-wrap gap-8 items-center justify-center overflow-y-scroll overflow-x-hidden	">
             <Card team={data} />
             <Card team={data} />
             <Card team={data} />

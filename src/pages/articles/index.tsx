@@ -15,8 +15,8 @@ export default function Articles() {
     <>
       <div className="w-full h-full m-auto">
         <PageTitle title="社群文章" />
-        <div className="mt-[2.5svh]">
-          <div className="w-fＦll h-[calc(100svh-45svh)] flex flex-wrap gap-8 items-center justify-center overflow-scroll">
+        <div className="p-[2.5svh]">
+          <div className="w-full h-[calc(100svh-45svh)] flex flex-wrap gap-8 items-center justify-center overflow-y-scroll overflow-x-hidden	">
             <Card article={data} />
             <Card article={data} />
             <Card article={data} />

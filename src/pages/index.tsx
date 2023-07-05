@@ -24,6 +24,7 @@ const Section = ({ id, children }: SectionProps) => (
       justifyContent: 'center',
       alignItems: 'center',
       scrollSnapAlign: 'start',
+      overflowX: 'hidden',
     }}
   >
     {children}
@@ -88,19 +89,19 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section id={linkList[1].route.split("#")[1]}>
+      <Section id={linkList[1].route.split('#')[1]}>
         <Clubs />
       </Section>
-      <Section id={linkList[2].route.split("#")[1]}>
+      <Section id={linkList[2].route.split('#')[1]}>
         <Articles />
       </Section>
-      <Section id={linkList[3].route.split("#")[1]}>
+      <Section id={linkList[3].route.split('#')[1]}>
         <Team />
       </Section>
-      <Section id={linkList[4].route.split("#")[1]}>
+      <Section id={linkList[4].route.split('#')[1]}>
         <Activities />
       </Section>
-      <Section id={linkList[5].route.split("#")[1]}>
+      <Section id={linkList[5].route.split('#')[1]}>
         <Sponsor />
       </Section>
     </div>

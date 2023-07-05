@@ -14,8 +14,8 @@ export default function Clubs() {
     <>
       <div className="w-full h-full m-auto">
         <PageTitle title="參與社團" />
-        <div className="mt-[2.5svh]">
-          <div className="w-full h-[calc(100svh-45svh)] flex flex-wrap gap-8 items-center justify-center overflow-scroll">
+        <div className="p-[2.5svh]">
+          <div className="w-full h-[calc(100svh-45svh)] flex flex-wrap gap-8 items-center justify-center overflow-y-scroll overflow-x-hidden	">
             <Card club={data} />
             <Card club={data} />
             <Card club={data} />

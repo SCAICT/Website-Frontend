@@ -10,6 +10,7 @@ export default function ClubsBar() {
     insID: '@mdcpp.2022',
     icon: 'https://yt3.ggpht.com/VIARxMe5c5YQwfqchu8oaJKZ2eIJWvjAFj9cPHoix-4pI8DBt4lPtQW5rmeZBVFPmH_DfnfJ=s900-c-k-c0x00ffffff-no-rj',
     introduction: '# 123',
+		clubID: "mdcpp"
   };
   return (
     <div className="bg-neutral-900 py-10">

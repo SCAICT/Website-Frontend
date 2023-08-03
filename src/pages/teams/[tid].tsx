@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 
 import PageTitle from '@/components/layout/pageTitle';
-import { ITeam } from '@/components/contents/teams/teams';
+import { ITeam } from '@/components/contents/groups/teams';
 import Card from '@/components/contents/Members/Card';
 import { IMember } from '@/components/contents/Members/members';
 

@@ -1,8 +1,13 @@
+import { IGroup } from '../groups/groups';
+import { IClubInfo } from '../JoinedClubs/club';
+
 export interface IMember {
+  id: string;
+  avatar: string;
+  name: string;
   nickname: string;
-  title: string;
-  club: string; // Maybe build up a club list?
-  titleInClub: string;
-  selfInto: string; // Markdown Supported
-  avatar: string; // path or URL
+  description: string;
+  groups: IGroup[];
+  club: IClubInfo;
+  club_position?: string[];
 }

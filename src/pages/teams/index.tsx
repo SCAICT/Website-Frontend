@@ -1,15 +1,23 @@
-import { ITeam } from '@/components/contents/teams/teams';
+import { IGroup } from '@/components/contents/groups/groups';
 import PageTitle from '@/components/layout/pageTitle';
-import Card from '@/components/contents/teams/Card';
+import Card from '@/components/contents/groups/Card';
+import { useEffect, useState } from 'react';
 
 export default function Team() {
-  const data: ITeam = {
-    name: '鍵盤組',
-    number: 8777,
-    leader: 'Lazp、HACO',
-    description: '負責在網路上打嘴砲，然後寫一些 Fuck code 偶爾蹲一下資源。',
-    members: ['AAA', 'BBB', 'NNN'],
-  };
+  const [groups, setGroups] = useState([]);
+  useEffect(() => {
+    const GetGroups = async () => {
+      try {
+        const res = await fetch('https://api.scaict.org/groups');
+        if (!res.ok) throw Error('Fetching Error with GetGroup Function.');
+        const data = await res.json();
+        setGroups(data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    GetGroups();
+  }, []);
 
   return (
     <>
@@ -17,16 +25,9 @@ export default function Team() {
         <PageTitle title="內部團隊" />
         <div className="p-[2.5svh]">
           <div className="w-full h-[calc(100svh-45svh)] flex flex-wrap gap-8 items-center justify-center overflow-y-scroll overflow-x-hidden	">
-            <Card team={data} />
-            <Card team={data} />
-            <Card team={data} />
-            <Card team={data} />
-            <Card team={data} />
-            <Card team={data} />
-            <Card team={data} />
-            <Card team={data} />
-            <Card team={data} />
-            <Card team={data} />
+            {groups.map((item) => {
+              return <Card group={item}></Card>;
+            })}
           </div>
         </div>
       </div>

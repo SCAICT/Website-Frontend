@@ -27,11 +27,11 @@ export default function Card(props: IProps) {
       <p className="my-2 font-thin">{data.school}</p>
       <a
         className="text-center"
-        href={`https://instagram.com/${data.insID.replace('@', '')}`}
+        href={`https://instagram.com/${data.instagram_id}`}
       >
-        Instagram: {data.insID}
+        Instagram: {data.instagram_id}
       </a>
-      <ReactMarkdown>{data.introduction}</ReactMarkdown>
+      <ReactMarkdown>{data.description}</ReactMarkdown>
     </div>
   );
 }

@@ -82,7 +82,7 @@ export default function Home() {
             </h2>
             <Link
               href={'/#activities'}
-              className="px-10 py-2 mt-4 text-xl font-thin transition bg-green-400 border border-green-400 rounded-full hover:bg-transparent hover:text-green-400"
+              className="px-10 py-2 mt-4 text-xl font-light transition bg-green-400 text-white border-2  border-green-400 rounded-full hover:bg-transparent hover:text-green-400 hover:border-green-400"
             >
               查看近期活動
             </Link>

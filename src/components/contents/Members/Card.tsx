@@ -5,17 +5,6 @@ interface IProps {
   member: IMember;
 }
 
-function dn2n(dn: string) {
-  if (dn.length % 2 !== 0) return console.error('invalid described-number');
-  let output = new String();
-  for (let i = 0; i < dn.length; i += 2) {
-    for (let j = 0; j < Number(dn[i]); j++) {
-      output += dn[i + 1];
-    }
-  }
-  return output;
-}
-
 export default function Card(props: IProps) {
   const data = props.member;
   return (
@@ -29,9 +18,11 @@ export default function Card(props: IProps) {
         className="rounded-full"
       ></Image>
       <p className="text-sm font-thin tracking-widest text-slate-400 ">
-        {data.club} {data.titleInClub}
+        {data.club.name} {data.club_position}
       </p>
-      <p className="max-w-full truncate text-green-800/80">{data.selfInto}</p>
+      <p className="max-w-full truncate text-green-800/80">
+        {data.description}
+      </p>
     </div>
   );
 }

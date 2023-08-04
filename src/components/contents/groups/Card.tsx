@@ -13,8 +13,8 @@ export default function Card(props: IProps) {
   return (
     <>
       <div
-        className="max-w-md px-6 py-5 cursor-pointer bg-neutral-900 rounded-xl"
-        onClick={() => Router.push('/teams/123')}
+        className="w-[448px] px-6 py-5 cursor-pointer bg-neutral-900 rounded-xl max-[640px]:max-w-[90vw]"
+        onClick={() => Router.push(`/teams/${data.id}`)}
       >
         <h1 className="my-1 text-2xl font-bold text-green-500">{data.name}</h1>
         <p className="mt-3 font-light text-gray-400">{data.description}</p>

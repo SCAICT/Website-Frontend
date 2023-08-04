@@ -1,32 +1,32 @@
 import Card from '@/components/contents/JoinedClubs/Card';
 import { IClubInfo } from '@/components/contents/JoinedClubs/club';
 import PageTitle from '@/components/layout/pageTitle';
+import { useEffect, useState } from 'react';
 
 export default function Clubs() {
-  const data: IClubInfo = {
-    name: 'MDCPP',
-    school: '明道中學',
-    instagram_id: '@mdcpp.2022',
-    icon: 'https://yt3.ggpht.com/VIARxMe5c5YQwfqchu8oaJKZ2eIJWvjAFj9cPHoix-4pI8DBt4lPtQW5rmeZBVFPmH_DfnfJ=s900-c-k-c0x00ffffff-no-rj',
-    description: '*TTT*',
-    clubID: 'mdcpp',
-  };
+  const [clubs, setClubs] = useState<Array<IClubInfo>>();
+  useEffect(() => {
+    const GetClubs = async () => {
+      try {
+        const res = await fetch('https://api.scaict.org/clubs');
+        if (!res.ok) throw Error('Fetching Error with GetClubs Function.');
+        const data = (await res.json()) as Array<IClubInfo>;
+        setClubs(data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    GetClubs();
+  }, []);
   return (
     <>
       <div className="w-full h-full m-auto">
         <PageTitle title="參與社團" />
         <div className="p-[2.5svh]">
           <div className="w-full h-[calc(100svh-45svh)] flex flex-wrap gap-8 items-center justify-center overflow-y-scroll overflow-x-hidden	">
-            <Card club={data} />
-            <Card club={data} />
-            <Card club={data} />
-            <Card club={data} />
-            <Card club={data} />
-            <Card club={data} />
-            <Card club={data} />
-            <Card club={data} />
-            <Card club={data} />
-            <Card club={data} />
+            {clubs?.map((item, i) => {
+              return <Card key={i} club={item}></Card>;
+            })}
           </div>
         </div>
       </div>

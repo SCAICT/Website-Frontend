@@ -12,7 +12,7 @@ export default function Card(props: IProps) {
   return (
     <div
       className="px-10 py-8 flex flex-col items-center bg-neutral-800 drop-shadow-lg max-w-md rounded-lg max-[640px]:w-[80svw] cursor-pointer hover:scale-110 transform-gpu duration-700 h-auto min-h-[350px]"
-      onClick={() => Router.push('/clubs/mdcpp')}
+      onClick={() => Router.push(`/clubs/${data.id}`)}
     >
       <h1 className="my-3 text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-blue-500">
         {data.name}

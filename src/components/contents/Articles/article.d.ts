@@ -1,7 +1,8 @@
 export interface IArticles {
   id: string;
   title: string;
-  timestamp: string;
+  created_at: string;
+  updated_at: string;
   tag: string[];
   content: string;
 }

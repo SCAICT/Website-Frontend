@@ -6,9 +6,9 @@ export default function Clubs() {
   const data: IClubInfo = {
     name: 'MDCPP',
     school: '明道中學',
-    insID: '@mdcpp.2022',
+    instagram_id: '@mdcpp.2022',
     icon: 'https://yt3.ggpht.com/VIARxMe5c5YQwfqchu8oaJKZ2eIJWvjAFj9cPHoix-4pI8DBt4lPtQW5rmeZBVFPmH_DfnfJ=s900-c-k-c0x00ffffff-no-rj',
-    introduction: '*TTT*',
+    description: '*TTT*',
     clubID: 'mdcpp',
   };
   return (

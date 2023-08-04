@@ -12,6 +12,8 @@ const nextConfig = {
       'avatars.githubusercontent.com',
       'banahaker.github.io',
       'raw.githubusercontent.com',
+      'cdn.haco.tw',
+      'cdn.discordapp.com',
     ],
   },
 };

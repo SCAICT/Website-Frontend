@@ -4,5 +4,5 @@ export interface IGroup {
   id: string;
   name: string;
   description: string;
-  members?: Array<IMember>;
+  members: Array<IMember> | null;
 }

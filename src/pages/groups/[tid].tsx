@@ -1,54 +1,50 @@
 import { useRouter } from 'next/router';
 
 import PageTitle from '@/components/layout/pageTitle';
-import { ITeam } from '@/components/contents/groups/teams';
+import { IGroup } from '@/components/contents/groups/groups';
 import Card from '@/components/contents/Members/Card';
-import { IMember } from '@/components/contents/Members/members';
+import { useEffect, useState } from 'react';
 
-const Post = () => {
+export default function Post() {
   const router = useRouter();
-  const { tid } = router.query;
-  const member: IMember = {
-    nickname: 'Lazp',
-    title: 'noob',
-    club: 'MDCPP',
-    titleInClub: 'Public Relationship',
-    selfInto: 'LazpLazp',
-    avatar: 'https://banahaker.github.io/assets/logo_bana.385cac5b.png',
-  };
-  const data: ITeam = {
-    name: '鍵盤組',
-    number: 8777,
-    leader: 'Lazp',
-    description: '負責在網路上打嘴砲，然後寫一些 Fuck code 偶爾蹲一下資源。',
-    members: ['AAA', 'BBB', 'NNN'],
-  };
+  const { query = {} } = router || {};
+  const { tid = 0 } = query || {};
+  const [group, setGroup] = useState<IGroup>();
+  useEffect(() => {
+    const GetGroup = async () => {
+      try {
+        console.log(tid);
+        const res = await fetch(`https://api.scaict.org/groups/${tid}`);
+        if (!res.ok) throw Error('Fetching Error with GetMembers Function.');
+        const data = await res.json();
+        setGroup(data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    if (tid) GetGroup();
+  }, [tid]);
+
   return (
     <>
       <PageTitle title="內部分組"></PageTitle>
       <div className="bg-neutral-900 py-5 px-6 rounded-xl cursor-pointer max-w-[80svw] m-auto mt-8">
-        <h1 className="text-2xl font-bold text-green-500 my-1">{data.name}</h1>
-        <span className="font-thin text-sm text-gray-500 pr-1">
-          人數: {data.number}
+        <h1 className="text-2xl font-bold text-green-500 my-1">
+          {group?.name}
+        </h1>
+        {/* <span className="font-thin text-sm text-gray-500 pr-1">
+          人數: {members.number}
         </span>
         <span className="font-thin text-sm text-gray-500">
           組長: {data.leader}
-        </span>
-        <p className="mt-3 font-light text-gray-400">{data.description}</p>
+        </span> */}
+        <p className="mt-3 font-light text-gray-400">{group?.description}</p>
       </div>
       <div className="flex flex-wrap p-10 gap-4 items-center justify-center ">
-        <Card member={member}></Card>
-        <Card member={member}></Card>
-        <Card member={member}></Card>
-        <Card member={member}></Card>
-        <Card member={member}></Card>
-        <Card member={member}></Card>
-        <Card member={member}></Card>
-        <Card member={member}></Card>
-        <Card member={member}></Card>
+        {group?.members.map((item, i) => {
+          return <Card key={i} member={item}></Card>;
+        })}
       </div>
     </>
   );
-};
-
-export default Post;
+}

@@ -6,7 +6,7 @@ import style from '../styles/Home.module.scss';
 import React, { ReactNode } from 'react';
 import Clubs from './clubs';
 import Articles from './articles';
-import Team from './teams';
+import Team from './groups';
 import Activities from './activities';
 import Sponsor from './sponsors';
 

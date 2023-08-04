@@ -25,8 +25,8 @@ export default function Team() {
         <PageTitle title="內部團隊" />
         <div className="p-[2.5svh]">
           <div className="w-full h-[calc(100svh-45svh)] flex flex-wrap gap-8 items-center justify-center overflow-y-scroll overflow-x-hidden	">
-            {groups.map((item) => {
-              return <Card group={item}></Card>;
+            {groups.map((item, i) => {
+              return <Card key={i} group={item}></Card>;
             })}
           </div>
         </div>

@@ -39,8 +39,6 @@ export default function Activities() {
     };
     GetActList();
 
-    setDetail((detail) => []);
-    console.log(detail);
     activities?.forEach((v) => {
       const start = new Date(v.date.start),
         end = new Date(v.date.end);
@@ -60,7 +58,10 @@ export default function Activities() {
         <div className="flex justify-center gap-6 flex-wrap w-full px-40 py-10 text-center card max-md:p-5">
           <Calendar
             value={date}
-            onChange={(e: CalendarChangeEvent) => setDate(e.value)}
+            onChange={(e: CalendarChangeEvent) => {
+              setDetail([]);
+              setDate(e.value);
+            }}
             inline
             showWeek
           />

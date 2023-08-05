@@ -26,10 +26,10 @@ export default function Card(props: IProps) {
       ></Image>
       <p className="my-2 font-thin">{data.school}</p>
       <a
-        className="text-center"
+        className="text-center text-white"
         href={`https://instagram.com/${data.instagram_id}`}
       >
-        Instagram: {data.instagram_id}
+        Instagram: <span className="text-green-400">{data.instagram_id}</span>
       </a>
       <ReactMarkdown>{data.description}</ReactMarkdown>
     </div>

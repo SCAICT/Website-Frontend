@@ -26,7 +26,7 @@ function RenderActList(props: propsList) {
 }
 
 export default function Activities() {
-  const [date, setDate] = useState<Date>(null);
+  const [date, setDate] = useState<Date | any>(null);
   const [activities, setActivities] = useState<Array<IActivity>>();
   const [detail, setDetail] = useState<string[]>([]);
 
